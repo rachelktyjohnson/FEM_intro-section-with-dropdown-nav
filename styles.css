@@ -33,7 +33,7 @@ header .navigation-container {
   display: none;
   z-index: 1;
   position: absolute;
-  background: white;
+  background: hsl(0deg, 0%, 98%);
   height: 100%;
   width: 240px;
   right: 0;
@@ -141,36 +141,36 @@ header .navigation-container .menu .menu-item .submenu a.has-icon:before {
   width: 15px;
   height: 15px;
 }
-header .navigation-container nav.account {
+header .navigation-container .account {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 @media (min-width: 1000px) {
-  header .navigation-container nav.account {
+  header .navigation-container .account {
     flex-direction: row;
   }
 }
-header .navigation-container nav.account a {
+header .navigation-container .account a {
   text-decoration: none;
   color: hsl(0deg, 0%, 41%);
   font-size: 0.9rem;
   padding: 15px;
 }
-header .navigation-container nav.account a:hover {
+header .navigation-container .account a:hover {
   color: hsl(0deg, 0%, 8%);
 }
-header .navigation-container nav.account a.btn-register {
+header .navigation-container .account a.btn-register {
   border: 1px solid hsl(0deg, 0%, 41%);
   border-radius: 10px;
   width: 100%;
   text-align: center;
 }
 @media (min-width: 1000px) {
-  header .navigation-container nav.account a.btn-register {
+  header .navigation-container .account a.btn-register {
     margin-left: 25px;
   }
-  header .navigation-container nav.account a.btn-register:hover {
+  header .navigation-container .account a.btn-register:hover {
     border: 1px solid hsl(0deg, 0%, 8%);
   }
 }
