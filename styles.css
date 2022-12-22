@@ -12,6 +12,19 @@ header {
   justify-content: space-between;
   align-items: start;
 }
+@media (min-width: 1000px) {
+  header {
+    max-width: 1365px;
+    width: 100%;
+    margin: 0 auto;
+    align-items: center;
+  }
+}
+@media (min-width: 1000px) {
+  header .open-menu {
+    display: none;
+  }
+}
 header .navigation-container {
   display: none;
   z-index: 1;
@@ -23,9 +36,35 @@ header .navigation-container {
   top: 0;
   padding: 20px;
 }
+@media (min-width: 1000px) {
+  header .navigation-container {
+    display: flex;
+    position: relative;
+    width: 100%;
+    justify-content: space-between;
+    margin-left: 65px;
+    padding: 0;
+  }
+}
 header .navigation-container img.close-menu {
   display: block;
   margin-left: auto;
+}
+@media (min-width: 1000px) {
+  header .navigation-container img.close-menu {
+    display: none;
+  }
+}
+@media (min-width: 1000px) {
+  header .navigation-container .menu {
+    display: flex;
+  }
+}
+@media (min-width: 1000px) {
+  header .navigation-container .menu .menu-item {
+    margin: 0 20px;
+    position: relative;
+  }
 }
 header .navigation-container .menu .menu-item a {
   text-decoration: none;
@@ -34,6 +73,15 @@ header .navigation-container .menu .menu-item a {
   display: block;
   margin: 30px 0;
 }
+@media (min-width: 1000px) {
+  header .navigation-container .menu .menu-item a {
+    margin: 0;
+    padding: 15px 0;
+  }
+  header .navigation-container .menu .menu-item a:hover {
+    color: hsl(0deg, 0%, 8%);
+  }
+}
 header .navigation-container .menu .menu-item a.has-submenu {
   position: relative;
 }
@@ -41,11 +89,33 @@ header .navigation-container .menu .menu-item a.has-submenu:after {
   content: url("images/icon-arrow-down.svg");
   margin-left: 10px;
 }
-header .navigation-container .menu .menu-item .submenu {
-  display: none;
+@media (min-width: 1000px) {
+  header .navigation-container .menu .menu-item .submenu {
+    display: none;
+    position: absolute;
+    background: white;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+    padding: 15px;
+    border-radius: 10px;
+  }
+  header .navigation-container .menu .menu-item .submenu.submenu-features {
+    width: 135px;
+    right: 0;
+  }
+  header .navigation-container .menu .menu-item .submenu.submenu-company {
+    width: 95px;
+  }
 }
 header .navigation-container .menu .menu-item .submenu a {
   margin-left: 25px;
+}
+@media (min-width: 1000px) {
+  header .navigation-container .menu .menu-item .submenu a {
+    margin: 0;
+    text-align: left;
+    font-size: 0.8rem;
+    padding: 5px 0;
+  }
 }
 header .navigation-container .menu .menu-item .submenu a.has-icon.todo:before {
   content: url("images/icon-todo.svg");
@@ -61,11 +131,18 @@ header .navigation-container .menu .menu-item .submenu a.has-icon.planning:befor
 }
 header .navigation-container .menu .menu-item .submenu a.has-icon:before {
   margin-right: 15px;
+  width: 15px;
+  height: 15px;
 }
 header .navigation-container nav.account {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+@media (min-width: 1000px) {
+  header .navigation-container nav.account {
+    flex-direction: row;
+  }
 }
 header .navigation-container nav.account a {
   text-decoration: none;
@@ -73,14 +150,25 @@ header .navigation-container nav.account a {
   font-size: 0.9rem;
   padding: 15px;
 }
+header .navigation-container nav.account a:hover {
+  color: hsl(0deg, 0%, 8%);
+}
 header .navigation-container nav.account a.btn-register {
   border: 1px solid hsl(0deg, 0%, 41%);
   border-radius: 10px;
   width: 100%;
   text-align: center;
 }
+@media (min-width: 1000px) {
+  header .navigation-container nav.account a.btn-register {
+    margin-left: 25px;
+  }
+  header .navigation-container nav.account a.btn-register:hover {
+    border: 1px solid hsl(0deg, 0%, 8%);
+  }
+}
 
-@media (min-width: 800px) {
+@media (min-width: 1000px) {
   main {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -93,7 +181,7 @@ header .navigation-container nav.account a.btn-register {
 main picture img.hero {
   width: 100%;
 }
-@media (min-width: 800px) {
+@media (min-width: 1000px) {
   main picture {
     order: 2;
   }
@@ -106,7 +194,7 @@ main .content {
   flex-direction: column;
   align-items: center;
 }
-@media (min-width: 800px) {
+@media (min-width: 1000px) {
   main .content {
     align-items: start;
     text-align: left;
@@ -116,7 +204,7 @@ main .content {
 main .content h1 {
   font-size: 2.1rem;
 }
-@media (min-width: 800px) {
+@media (min-width: 1000px) {
   main .content h1 {
     font-size: 4.3rem;
   }
@@ -126,7 +214,7 @@ main .content p {
   margin: 30px 0;
   color: hsl(0deg, 0%, 41%);
 }
-@media (min-width: 800px) {
+@media (min-width: 1000px) {
   main .content p {
     font-size: 1.1rem;
   }
@@ -141,7 +229,7 @@ main .content .btn-learn {
   border-radius: 10px;
   border: 1px solid hsl(0deg, 0%, 8%);
 }
-@media (min-width: 800px) {
+@media (min-width: 1000px) {
   main .content .btn-learn {
     margin-bottom: 100px;
     font-weight: 700;
@@ -159,7 +247,7 @@ main .content .clients {
   align-items: center;
   grid-gap: 25px;
 }
-@media (min-width: 800px) {
+@media (min-width: 1000px) {
   main .content .clients {
     grid-gap: 40px;
   }
