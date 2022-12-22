@@ -89,6 +89,9 @@ header .navigation-container .menu .menu-item a.has-submenu:after {
   content: url("images/icon-arrow-down.svg");
   margin-left: 10px;
 }
+header .navigation-container .menu .menu-item .submenu {
+  display: none;
+}
 @media (min-width: 1000px) {
   header .navigation-container .menu .menu-item .submenu {
     display: none;
@@ -175,7 +178,7 @@ header .navigation-container nav.account a.btn-register {
     max-width: 1140px;
     width: 100%;
     grid-gap: 155px;
-    margin: 0 auto;
+    margin: 45px auto 0;
   }
 }
 main picture img.hero {
