@@ -3,6 +3,179 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: "Epilogue", sans-serif;
+}
+
+header {
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+}
+header .navigation-container {
+  display: none;
+  z-index: 1;
+  position: absolute;
+  background: white;
+  height: 100%;
+  width: 240px;
+  right: 0;
+  top: 0;
+  padding: 20px;
+}
+header .navigation-container img.close-menu {
+  display: block;
+  margin-left: auto;
+}
+header .navigation-container .menu .menu-item a {
+  text-decoration: none;
+  color: hsl(0deg, 0%, 41%);
+  font-size: 0.9rem;
+  display: block;
+  margin: 30px 0;
+}
+header .navigation-container .menu .menu-item a.has-submenu {
+  position: relative;
+}
+header .navigation-container .menu .menu-item a.has-submenu:after {
+  content: url("images/icon-arrow-down.svg");
+  margin-left: 10px;
+}
+header .navigation-container .menu .menu-item .submenu {
+  display: none;
+}
+header .navigation-container .menu .menu-item .submenu a {
+  margin-left: 25px;
+}
+header .navigation-container .menu .menu-item .submenu a.has-icon.todo:before {
+  content: url("images/icon-todo.svg");
+}
+header .navigation-container .menu .menu-item .submenu a.has-icon.calendar:before {
+  content: url("images/icon-calendar.svg");
+}
+header .navigation-container .menu .menu-item .submenu a.has-icon.reminders:before {
+  content: url("images/icon-reminders.svg");
+}
+header .navigation-container .menu .menu-item .submenu a.has-icon.planning:before {
+  content: url("images/icon-planning.svg");
+}
+header .navigation-container .menu .menu-item .submenu a.has-icon:before {
+  margin-right: 15px;
+}
+header .navigation-container nav.account {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+header .navigation-container nav.account a {
+  text-decoration: none;
+  color: hsl(0deg, 0%, 41%);
+  font-size: 0.9rem;
+  padding: 15px;
+}
+header .navigation-container nav.account a.btn-register {
+  border: 1px solid hsl(0deg, 0%, 41%);
+  border-radius: 10px;
+  width: 100%;
+  text-align: center;
+}
+
+@media (min-width: 800px) {
+  main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 1140px;
+    width: 100%;
+    grid-gap: 155px;
+    margin: 0 auto;
+  }
+}
+main picture img.hero {
+  width: 100%;
+}
+@media (min-width: 800px) {
+  main picture {
+    order: 2;
+  }
+}
+main .content {
+  text-align: center;
+  padding: 20px;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media (min-width: 800px) {
+  main .content {
+    align-items: start;
+    text-align: left;
+    justify-content: center;
+  }
+}
+main .content h1 {
+  font-size: 2.1rem;
+}
+@media (min-width: 800px) {
+  main .content h1 {
+    font-size: 4.3rem;
+  }
+}
+main .content p {
+  line-height: 1.5;
+  margin: 30px 0;
+  color: hsl(0deg, 0%, 41%);
+}
+@media (min-width: 800px) {
+  main .content p {
+    font-size: 1.1rem;
+  }
+}
+main .content .btn-learn {
+  margin-bottom: 45px;
+  background: black;
+  padding: 15px 20px;
+  text-decoration: none;
+  color: white;
+  font-size: 0.9rem;
+  border-radius: 10px;
+  border: 1px solid hsl(0deg, 0%, 8%);
+}
+@media (min-width: 800px) {
+  main .content .btn-learn {
+    margin-bottom: 100px;
+    font-weight: 700;
+  }
+  main .content .btn-learn:hover {
+    background: hsl(0deg, 0%, 98%);
+    color: hsl(0deg, 0%, 8%);
+    cursor: pointer;
+  }
+}
+main .content .clients {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  align-items: center;
+  grid-gap: 25px;
+}
+@media (min-width: 800px) {
+  main .content .clients {
+    grid-gap: 40px;
+  }
+}
+main .content .clients img {
+  width: 100%;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: none;
 }
 
 /*# sourceMappingURL=styles.css.map */
