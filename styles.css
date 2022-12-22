@@ -6,6 +6,10 @@
   font-family: "Epilogue", sans-serif;
 }
 
+body {
+  background: hsl(0deg, 0%, 98%);
+}
+
 header {
   padding: 20px;
   display: flex;
